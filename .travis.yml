@@ -12,7 +12,7 @@ before_install:
     - mysql -uroot -e "drop database if exists belajar"
     - mysql -uroot -e "create database belajar"
     - mysql -uroot "belajar"
-    - mysql -e "USE mysql;
+    - mysql -e "USE belajar;
       DROP TABLE IF EXISTS product;
       CREATE TABLE product (
           'id' varchar(32) NOT NULL,
