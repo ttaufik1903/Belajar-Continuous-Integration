@@ -43,9 +43,9 @@ public class ProductApiTests extends AbstractTest {
 	public void createProduct() throws Exception {
 		String uri = "/products";
 		Product product = new Product();
-		product.setCode("T-008");
+		product.setCode("T-030");
 		product.setName("Server X");
-		product.setId("T-009");
+		product.setId("T-030");
 		product.setPrice(new BigDecimal("101000.01"));
 		String inputJson = super.mapToJson(product);
 		MvcResult mvcResult = mvc.perform(
@@ -55,7 +55,7 @@ public class ProductApiTests extends AbstractTest {
 		
 		String content = mvcResult.getResponse().getContentAsString();
 		//assertEquals(content, "Product is created successfully");
-		assertEquals(content, "{\"id\":\"T-008\",\"code\":\"T-009\",\"name\":\"Server X\",\"price\":101000.01}");
+		assertEquals(content, "{\"id\":\"T-030\",\"code\":\"T-030\",\"name\":\"Server X\",\"price\":101000.01}");
 		int status = mvcResult.getResponse().getStatus();
 		//assertEquals(201, status);
 		assertEquals(200, status);
@@ -63,11 +63,11 @@ public class ProductApiTests extends AbstractTest {
 
 	@Test
 	public void updateProduct() throws Exception {
-		String uri = "/products/T-008";
+		String uri = "/products/T-030";
 		Product product = new Product();
-		product.setCode("T-009");
+		product.setCode("T-030");
 		product.setName("Server X");
-		product.setId("T-008");
+		product.setId("T-030");
 		product.setPrice(new BigDecimal("101000.01"));
 		String inputJson = super.mapToJson(product);
 		MvcResult mvcResult = mvc.perform(
@@ -78,14 +78,14 @@ public class ProductApiTests extends AbstractTest {
 		assertEquals(200, status);
 		
 		String content = mvcResult.getResponse().getContentAsString();
-		 assertEquals(content, "{\"id\":\"T-008\",\"code\":\"T-009\",\"name\":\"Server X\",\"price\":101000.01}");
+		 assertEquals(content, "{\"id\":\"T-030\",\"code\":\"T-030\",\"name\":\"Server X\",\"price\":101000.01}");
 		
 		//assertEquals(content, "Product is updated successsfully");
 	}
 
 	@Test
 	public void deleteProduct() throws Exception {
-		String uri = "/products/T-008";
+		String uri = "/products/T-030";
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.delete(uri)).andReturn();
 		int status = mvcResult.getResponse().getStatus();
 		assertEquals(200, status);

@@ -38,9 +38,9 @@ public class ProductRestController {
 		repository.deleteAll();
 
 		Product product = new Product();
-		product.setCode("T-009");
+		product.setCode("T-030");
 		product.setName("Server X");
-		product.setId("T-008");
+		product.setId("T-030");
 		product.setPrice(new BigDecimal("101000.01"));
 
 		return repository.save(product);
@@ -51,7 +51,7 @@ public class ProductRestController {
 	Product updateData(@PathVariable String id) {
 
 		Product product = repository.findById(id).orElse(null);
-		product.setCode("T-009");
+		product.setCode("T-030");
 		product.setName("Server X");
 		product.setPrice(new BigDecimal("101000.01"));
 
@@ -63,9 +63,9 @@ public class ProductRestController {
 	String Delete(@PathVariable String id) {
 
 		Product product = new Product();
-		product.setCode("T-009");
+		product.setCode("T-030");
 		product.setName("Server X");
-		product.setId("T-008");
+		product.setId("T-030");
 		product.setPrice(new BigDecimal("101000.01"));
 		repository.save(product);
 
