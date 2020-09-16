@@ -11,7 +11,6 @@ before_install:
     - mysql -uroot -e "grant all on belajar.* to belajar@localhost identified by 'java'"
     - mysql -uroot -e "drop database if exists belajar"
     - mysql -uroot -e "create database belajar"
-    - mysql -uroot "belajar"
     - mysql -uroot -e "USE belajar;
     - mysql -uroot -e "DROP TABLE IF EXISTS product;"
     - mysql -uroot -e  "CREATE TABLE product (
