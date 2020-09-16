@@ -12,12 +12,12 @@ before_install:
     - mysql -uroot -e "drop database if exists belajar"
     - mysql -uroot -e "create database belajar"
     - mysql -uroot -e "USE belajar;"
-    - mysql -uroot -e "DROP TABLE IF EXISTS product;"
-    - mysql -uroot -e  "CREATE TABLE product (
+                 DROP TABLE IF EXISTS product;
+           CREATE TABLE product (
           'id' varchar(32) NOT NULL,
           'code' varchar(10) NOT NULL,
           'name' varchar(255) NOT NULL,
-          'price' decimal(19,2) NOT NULL,
+          'price' decimal(19,2) NOT NULL, 
           PRIMARY KEY ('d'),
           UNIQUE KEY 'code' ('code')
         ) ENGINE=InnoDB DEFAULT CHARSET=latin1;"
