@@ -19,7 +19,10 @@ before_install:
                           name varchar(255) NOT NULL,
                           price decimal(19,2) NOT NULL, 
                           PRIMARY KEY (id)
-                   );"
+                   ); insert 
+                        into
+                            product
+                            (code, name, price, id) values('T-030','SERVER X',101000.01,'T-030'); "
     - chmod +x mvnw
     - sudo mysql -e "use mysql; update user set authentication_string=PASSWORD('t4ufik83') where User='root'; update user set plugin='mysql_native_password';FLUSH PRIVILEGES;"
     - sudo service mysql restart
