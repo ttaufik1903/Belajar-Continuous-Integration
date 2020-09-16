@@ -23,9 +23,9 @@ public class ProductRestController {
 	List<Product> all() {
 
 		Product product = new Product();
-		product.setCode("T-009");
+		product.setCode("T-020");
 		product.setName("Server X");
-		product.setId("T-008");
+		product.setId("T-020");
 		product.setPrice(new BigDecimal("101000.01"));
 		repository.save(product);
 
@@ -35,7 +35,6 @@ public class ProductRestController {
 	@PostMapping("/products")
 	Product saveData() {
 
-		
 		repository.deleteAll();
 
 		Product product = new Product();
@@ -62,15 +61,15 @@ public class ProductRestController {
 
 	@DeleteMapping("/products/{id}")
 	String Delete(@PathVariable String id) {
-		
+
 		Product product = new Product();
 		product.setCode("T-009");
 		product.setName("Server X");
 		product.setId("T-008");
 		product.setPrice(new BigDecimal("101000.01"));
 		repository.save(product);
-		
- 		repository.deleteById(product.getId());
+
+		repository.deleteById(product.getId());
 		String returns = "Product is deleted successsfully";
 
 		return returns;

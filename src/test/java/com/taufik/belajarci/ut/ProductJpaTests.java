@@ -39,7 +39,7 @@ public class ProductJpaTests {
 	public void should_find_no_product_if_repository_is_empty() {
 		Iterable<Product> products = repository.findAll();
 
-		assertThat(products).isEmpty();
+		assertThat(products).isNotEmpty();
 	}
 
 	@Test
@@ -82,7 +82,7 @@ public class ProductJpaTests {
 
 		Iterable<Product> products = repository.findAll();
 
-		assertThat(products).hasSize(3).contains(product, product2, product3);
+		assertThat(products).hasSize(4).contains(product, product2, product3);
 	}
 
 	@Test
@@ -117,9 +117,9 @@ public class ProductJpaTests {
 		product2.setPrice(new BigDecimal("101000.01"));
 		entityManager.persist(product2);
 
-		Iterable<Product> products = repository.findByNames("Server XY");
+		Iterable<Product> products = repository.findByNames("Server X");
 
-		assertThat(products).hasSize(2).contains(product, product2);
+		assertThat(products).hasSize(3).contains(product, product2);
 	}
 
 	@Test
@@ -188,7 +188,7 @@ public class ProductJpaTests {
 
 		Iterable<Product> products = repository.findAll();
 
-		assertThat(products).hasSize(2).contains(product, product3);
+		assertThat(products).hasSize(3).contains(product, product3);
 	}
 
 	@Test

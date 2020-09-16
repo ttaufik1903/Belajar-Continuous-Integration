@@ -1,6 +1,7 @@
 package com.taufik.belajarci.ut;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.math.BigDecimal;
@@ -77,7 +78,7 @@ public class ProductApiTests extends AbstractTest {
 		assertEquals(200, status);
 		
 		String content = mvcResult.getResponse().getContentAsString();
-		assertEquals(content, "{\"id\":\"T-008\",\"code\":\"T-009\",\"name\":\"Server X\",\"price\":101000.01}");
+		 assertEquals(content, "{\"id\":\"T-008\",\"code\":\"T-009\",\"name\":\"Server X\",\"price\":101000.01}");
 		
 		//assertEquals(content, "Product is updated successsfully");
 	}
