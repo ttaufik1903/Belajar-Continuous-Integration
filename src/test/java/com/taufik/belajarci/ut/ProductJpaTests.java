@@ -60,9 +60,9 @@ public class ProductJpaTests {
 	@Test
 	public void should_find_all_products() {
 		Product product = new Product();
-		product.setCode("T-009");
+		product.setCode("T-800");
 		product.setName("Server X");
-		product.setId("T-008");
+		product.setId("T-800");
 		product.setPrice(new BigDecimal("101000.01"));
 		entityManager.persist(product);
 
@@ -88,9 +88,9 @@ public class ProductJpaTests {
 	@Test
 	public void should_find_product_tutorial_by_id() {
 		Product product = new Product();
-		product.setCode("T-009");
+		product.setCode("T-800");
 		product.setName("Server X");
-		product.setId("T-008");
+		product.setId("T-800");
 		product.setPrice(new BigDecimal("101000.01"));
 		entityManager.persist(product);
 
@@ -104,15 +104,15 @@ public class ProductJpaTests {
 	@Test
 	public void should_find_byname_products() {
 		Product product = new Product();
-		product.setId("T-007");
-		product.setCode("T-009");
+		product.setId("T-900");
+		product.setCode("T-900");
 		product.setName("Server X");
 		product.setPrice(new BigDecimal("101000.01"));
 		entityManager.persist(product);
 
 		Product product2 = new Product();
-		product2.setId("T-008");
-		product2.setCode("T-010");
+		product2.setId("T-800");
+		product2.setCode("T-800");
 		product2.setName("Server X");
 		product2.setPrice(new BigDecimal("101000.01"));
 		entityManager.persist(product2);
@@ -164,9 +164,9 @@ public class ProductJpaTests {
 	public void should_delete_product_by_id() {
 
 		Product product = new Product();
-		product.setCode("T-009");
+		product.setCode("T-800");
 		product.setName("Server X");
-		product.setId("T-008");
+		product.setId("T-800");
 		product.setPrice(new BigDecimal("101000.01"));
 		entityManager.persist(product);
 
