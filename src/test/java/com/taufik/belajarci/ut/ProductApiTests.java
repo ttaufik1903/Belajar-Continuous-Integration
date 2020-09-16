@@ -25,7 +25,7 @@ public class ProductApiTests extends AbstractTest {
 		super.setUp();
 	}
 
-	@Test
+	/*@Test
 	public void getProductsList() throws Exception {
 		String uri = "/products";
 		MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.get(uri).accept(MediaType.APPLICATION_JSON_VALUE))
@@ -37,7 +37,7 @@ public class ProductApiTests extends AbstractTest {
 		Product[] productlist = super.mapFromJson(content, Product[].class);
 
 		assertTrue(productlist.length > 0);
-	}
+	}*/
 
 	@Test
 	public void createProduct() throws Exception {
