@@ -30,7 +30,7 @@ public class AbstractTest {
 
 	@Test
     public void testA(){
-        System.out.println("Hello");
+        System.out.println("Hellosss");
     }
 	
 	protected void setUp() {
