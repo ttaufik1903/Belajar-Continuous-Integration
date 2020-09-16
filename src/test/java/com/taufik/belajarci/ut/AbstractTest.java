@@ -5,6 +5,7 @@ import java.io.IOException;
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
+import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -27,6 +28,11 @@ public class AbstractTest {
 	@Autowired
 	WebApplicationContext webApplicationContext;
 
+	@Test
+    public void testA(){
+        System.out.println("Hello");
+    }
+	
 	protected void setUp() {
 		mvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
 	}
